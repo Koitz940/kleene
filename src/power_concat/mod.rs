@@ -9,10 +9,10 @@ pub fn power_concat(s1: &str, m: usize) -> String {
 }
 
 fn test1(s1: &str, m: usize, s: &str, total: &mut i32, good: &mut i32) {
-    print!("Test: power_concat({}, {}) ", s1, m);
+    print!("Test: power_concat(\"{}\", {}) ", s1, m);
 
     let got = power_concat(s1, m);
-    print!("\nexpected: {}\ngot: {}\n", s, got);
+    print!("\nexpected: \"{}\"\ngot: \"{}\"\n", s, got);
 
     if got == s {
         println!("Ok\n");

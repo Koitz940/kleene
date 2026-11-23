@@ -3,10 +3,10 @@ pub fn concat(s1: &str, s2: &str) -> String {
 }
 
 fn test1(s1: &str, s2: &str, s: &str, total: &mut i32, good: &mut i32) {
-    print!("Test: concat({}, {}) ", s1, s2);
+    print!("Test: concat(\"{}\", \"{}\") ", s1, s2);
 
     let got = concat(s1, s2);
-    print!("\nexpected: {}\ngot: {}\n", s, got);
+    print!("\nexpected: \"{}\"\ngot: \"{}\"\n", s, got);
 
     if got == s {
         println!("Ok\n");
