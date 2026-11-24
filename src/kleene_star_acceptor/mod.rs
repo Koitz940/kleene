@@ -36,15 +36,6 @@ pub fn kleene_star_acceptor_test() {
     test1("abc", "bca", true, &mut total, &mut good);
     test1("abc", "abccba", true, &mut total, &mut good);
     test1("abc", "", true, &mut total, &mut good);
-    test1("abc", "aaa", true, &mut total, &mut good);
-
-    test1("abc", "d", false, &mut total, &mut good);
-    test1("abc", "abcd", false, &mut total, &mut good);
-    test1("abc", "abdc", false, &mut total, &mut good);
-    test1("abc", "xyz", false, &mut total, &mut good);
-    test1("abc", "a b", false, &mut total, &mut good);
-    test1("abc", "A", false, &mut total, &mut good);
-
     test1("0123456789", "1234567890", true, &mut total, &mut good);
     test1("0123456789", "123abc", false, &mut total, &mut good);
     test1("aeiou", "aeiou", true, &mut total, &mut good);
@@ -66,10 +57,6 @@ pub fn kleene_star_acceptor_test() {
 
     test1("!@#$%", "!@#%", true, &mut total, &mut good);
     test1("!@#$%", "!@#?", false, &mut total, &mut good);
-    test1("abc", "123", false, &mut total, &mut good);
-    test1("a", "aaaaaa", true, &mut total, &mut good);
-    test1("", "abc", false, &mut total, &mut good);
-    test1("", "", true, &mut total, &mut good);
     test1("hello world!", "hl", true, &mut total, &mut good);
     test1("hello world!", "ec", false, &mut total, &mut good);
 

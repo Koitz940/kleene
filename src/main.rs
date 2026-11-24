@@ -1,3 +1,5 @@
+mod structs;
+
 mod concat;
 use concat::concat_test;
 
@@ -13,10 +15,16 @@ use levenshtein_distance::levenshtein_distance_test;
 mod kleene_star_acceptor;
 use kleene_star_acceptor::kleene_star_acceptor_test;
 
+mod language_acceptor;
+use language_acceptor::my_rg_acceptor_test;
+
+mod finite_automaton;
+
 fn main() {
     concat_test();
     power_concat_test();
     kleene_star_generator_test();
     levenshtein_distance_test();
     kleene_star_acceptor_test();
+    my_rg_acceptor_test();
 }
